@@ -54,4 +54,22 @@ All .whl files must match Python 3.9 (cp39) and system architecture.
 To deactivate the virtual environment:
 
     deactivate
-    
+
+
+## Wintel steps with VSCode
+
+  ```powershell
+  python.exe -m venv wintel
+
+  Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+
+  .\wintel\Scripts\Activate.ps1
+
+  (wintel) PS C:\Users\Trending Pc\Documents\PC-4060Ti\Documentos\Repos\GITHUB\templates-pip-modules> 
+
+  mkdir .\wintel\ansible_packages
+
+  cd wintel
+
+  pip download -d ansible_packages ansible-core ansible-lint checkov pylint shellcheck-py
+  ```
